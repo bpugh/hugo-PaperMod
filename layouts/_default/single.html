@@ -1,9 +1,9 @@
 {{- define "main" }}
 
-<article class="post-single">
+<article class="post-single h-entry">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
-    <h1 class="post-title entry-hint-parent">
+    <h1 class="post-title entry-hint-parent p-name">
       {{ .Title }}
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
@@ -15,7 +15,7 @@
       {{- end }}
     </h1>
     {{- if .Description }}
-    <div class="post-description">
+    <div class="post-description p-summary">
       {{ .Description }}
     </div>
     {{- end }}
@@ -35,7 +35,7 @@
   {{- end }}
 
   {{- if .Content }}
-  <div class="post-content">
+  <div class="post-content e-content">
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
