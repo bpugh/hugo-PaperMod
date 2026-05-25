@@ -51,6 +51,15 @@
       <li><a href="{{ .Permalink }}">{{ .Name }}</a></li>
       {{- end }}
     </ul>
+    <p class="reply-links">
+      Reply via:
+      <a
+        href="mailto:blog@bpugh.dev?subject=Reply to {{ .Title }}"
+        >Email</a
+      >
+      · <a href="https://hachyderm.io/@bpugh">Mastodon</a> ·
+      <a href="https://bsky.app/profile/bpugh.dev">Bluesky</a>
+    </p>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
